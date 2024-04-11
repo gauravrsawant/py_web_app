@@ -8,4 +8,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["python", "app.py"]
+# Expose port 8082 to allow external access
+EXPOSE 8082
+
+# Command to run the Flask application on port 8082
+CMD ["python", "app.py", "--port", "8082"]
