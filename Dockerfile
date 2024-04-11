@@ -12,4 +12,4 @@ COPY . .
 EXPOSE 8082
 
 # Command to run the Flask application on port 8082
-CMD ["python", "app.py", "--port", "8082"]
+CMD ["python", "app.py", "--host=0.0.0.0", "--port=8082"]
